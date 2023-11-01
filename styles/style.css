@@ -9,10 +9,10 @@
 
 body {
   margin:0;
-}
-
-button:not([disabled]) {
-  cursor:pointer;
+  background-image: url("../images/achtergrond.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: url("../images/muis.png");
 }
 
 img {
@@ -44,7 +44,3 @@ img {
 h1 {
   color:var(--color-headings);
 }
-
-/* ... */
-
-
