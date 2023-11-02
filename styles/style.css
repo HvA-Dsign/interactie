@@ -7,20 +7,23 @@
   box-sizing:border-box;  
 }
 
+html {
+  min-height:100dvh;
+  cursor: url('../images/muis.png') 32 23, auto;
+  
+}
+
 body {
   margin:0;
   background-image: url("../images/achtergrond.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  cursor: url("../images/muis.png");
+  min-height:100dvh;
+
+  display:grid;
+  place-items:center;
+  
 }
-
-img {
-  max-width:100%;
-}
-
-
-
 
 
 /*********************/
@@ -43,4 +46,23 @@ img {
 
 h1 {
   color:var(--color-headings);
+}
+
+
+/* kwallen */
+ul{
+  list-style-type: none;
+}
+
+ul li{
+  justify-content: space-between;
+  display: inline;
+  /* place-content:center; */
+  flex-direction: row;
+  /* align-items: center; */
+
+}
+
+ul li img{
+
 }
