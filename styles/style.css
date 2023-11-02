@@ -50,19 +50,29 @@ h1 {
 
 
 /* kwallen */
-ul{
+/* ul{
   list-style-type: none;
 }
 
 ul li{
   justify-content: space-between;
   display: inline;
-  /* place-content:center; */
   flex-direction: row;
-  /* align-items: center; */
 
+} */
+
+
+
+ul {
+  list-style-type: none;
+  display: flex; /* Maak van de <ul> een flex-container */
+  justify-content: center; /* Centreer de inhoud horizontaal */
 }
 
-ul li img{
+ul li {
+  margin: 1.5em; /* Voeg de gewenste ruimte toe tussen de afbeeldingen */
+}
 
+ul li img {
+  height: auto; /* Optioneel: pas de hoogte aan om de verhoudingen te behouden */
 }
