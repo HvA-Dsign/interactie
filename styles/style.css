@@ -1,6 +1,11 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+/* fonts */
+@font-face {
+  font-family: "spongebobLettertype";
+  src: url(../fonts/SpongeboyRegular-gx2n6.woff2) format("woff2");
+}
 
 /* naar een idee van Jen Simmons */
 *, *::after, *::before {
@@ -32,8 +37,10 @@ body {
 /*********************/
 
 :root {
-  --color-headings:crimson
   /* ... */
+  --inset-color1: #0fb4ff;
+
+  --fontTitel:"spongebobLettertype", arial, helvetica, sans-serif;
 
 }
 
@@ -45,23 +52,64 @@ body {
 /* ALGEMENE STYLING */
 /********************/
 
-h1 {
-  color:var(--color-headings);
-}
-
 
 /* bellen */
 .onzichtbaar {
   display: none;
 }
 
+p {
+  display: inline-block;
+  font-family:   var(--fontTitel);
+  font-size: 0.8em;
+}
+
 .belZichtbaar{
-  display: block;
-  position: absolute;
-  
+  display: flex;
+  justify-content: center;
+
+	position: absolute;
+	border-radius: 50%;
+	background-color: white;
+	background: linear-gradient(to left, #7e94bf, #88bfb0);
+	box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+  width: 50em;
+  height: 50em;
+}
+
+.belZichtbaar:before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 50em;
+	width: 50em;
+	border-radius: 50%;
+	background: #84b9bf;
+	opacity: 0.8;
+	overflow: hidden;
+  z-index: -1;
+}
+
+.belZichtbaar:after {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 12%;
+	right: 20%;
+	height: 9em;
+	width: 4em;
+	border-radius: 50%;
+	background: white;
+	overflow: hidden;
+  opacity: 0.2;
 }
 
 
+
+/* #bel1 {
+	height: 100px;
+	width: 100px;
+} */
 
 
 /* kwallen */
