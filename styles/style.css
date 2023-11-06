@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  position: relative;
   margin:0;
   background-image: url("../images/achtergrond.jpg");
   background-size: cover;
@@ -22,7 +23,7 @@ body {
 
   display:grid;
   place-items:center;
-  
+  grid-template-rows: repeat(2, 1fr);
 }
 
 
@@ -49,11 +50,26 @@ h1 {
 }
 
 
+/* bellen */
+.onzichtbaar {
+  display: none;
+}
+
+.belZichtbaar{
+  display: block;
+  position: absolute;
+  
+}
+
+
+
+
 /* kwallen */
 ul {
   list-style-type: none;
   display: flex; 
   justify-content: center; 
+  grid-row: 1 / 2;
 }
 
 ul li {
@@ -65,10 +81,40 @@ ul li img {
 }
 
 
+/* spongebob GIF */
+body>img:first-of-type{
+  position: absolute;
+  right: -30em;
+  bottom: 0;
+  animation-name: spongebobRennen; 
+  animation-duration: 17s; 
+  animation-iteration-count: 3; 
+}
+
+@keyframes spongebobRennen{
+  0% {
+    right: -30em;
+    transform: scaleX(1);
+  }
+  50% {
+    right: 100%;
+    transform: scaleX(1);
+  }
+  51% {
+    right: 100%;
+    transform: scaleX(-1);
+  }
+  100% {
+    right: -30em;
+    transform: scaleX(-1);
+  }
+}
+
 
 /********************/
 /* ANIMATIE */
 /********************/
+/* kwallen animatie  */
 @keyframes kwallen {
   0%{
     transform: translateY(8em); 
@@ -142,89 +188,3 @@ ul li {
   animation-duration: 10s; 
   animation-iteration-count: infinite; 
 }
-
-.onzichtbaar {
-  display: none;
-}
-
-.bel1zichtbaar{
-  display: block;
-  position: absolute;
-}
-
-
-/* extra */
-/* @keyframes kwallen {
-  0%{
-    transform: translateY(8em); 
-    animation-timing-function: ease-in-out;
-  }
-
-  15%{
-    transform: translateY(4.5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 99%);
-  }
-
-  20%{
-    transform: translateY(5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 95%);
-
-  }
-
- 25%{
-    transform: translateY(4.5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 99%);
-  }
-
-
-
-  40%{
-    transform: translateY(0.5em); 
-    animation-timing-function: ease-in-out;
-  }
-
-  45%{
-    transform: translateY(1em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 95%);
-  }
-  50%{
-    transform: translateY(0.5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 99%);
-  }
-
-  55%{
-    transform: translateY(1em); 
-    animation-timing-function: ease-in-out;
-  }
-
-  
-
-  75%{
-    transform: translateY(4.5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 99%);
-  }
-
-  80%{
-    transform: translateY(5em); 
-    animation-timing-function: ease-in-out;
-    transform: scale(100%, 95%);
-  }
-
-  85%{
-    transform: translateY(4.5em); 
-    animation-timing-function: ease-in-out;
-  }
-
-
- 
-  100% {
-    transform: translateY(8em); 
-    animation-timing-function: ease-in-out;
-  }
-} */
