@@ -38,3 +38,22 @@ function sluitBel2() {
 
 kwal2.onclick = toggleBel2;
 bel2.onclick = sluitBel2;
+
+// bel 3
+var kwal3 = document.querySelector ("li:nth-of-type(3) img");
+var tekstBel3 = document.getElementById("bel3");
+var bel3 = document.querySelector ("#bel3");
+
+function toggleBel3(){
+    tekstBel3.classList.toggle("belZichtbaar");
+    console.log("bel 3 zichtbaar");
+}
+
+function sluitBel3() {
+    if (tekstBel3.classList.contains("belZichtbaar")) {
+        tekstBel3.classList.remove("belZichtbaar");
+    }
+}
+
+kwal3.onclick = toggleBel3;
+bel3.onclick = sluitBel3;

@@ -12,12 +12,6 @@
   src: url(../fonts/LondrinaSolid-Light.woff2) format("woff2");
 }
 
-/* @font-face{
-  font-family: "LondrinaSolid-Regular", "LondrinaSolid-Thin", "LondrinaSolid-Black";
-  src: url(../fonts/LondrinaSolid-Regular.woff2) format("woff2"),
-       url(../fonts/LondrinaSolid-Light.woff2) format("woff2"),
-       url(../fonts/LondrinaSolid-Black.woff2) format("woff2");
-} */
 
 /* naar een idee van Jen Simmons */
 *, *::after, *::before {
@@ -27,7 +21,6 @@
 html {
   min-height:100dvh;
   cursor: url('../images/muis.png') 32 23, auto;
-  
 }
 
 body {
@@ -37,7 +30,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height:100dvh;
-
   display:grid;
   place-items:center;
   grid-template-rows: repeat(2, 1fr);
@@ -66,37 +58,50 @@ body {
 .onzichtbaar {
   display: none;
 }
-/* ul:nth-of-type(2){
-  display: flex;
-  flex-direction: column;
-} */
-ul:nth-of-type(2) li,ul:nth-of-type(3) li{
+
+ul:nth-of-type(2) li, 
+ul:nth-of-type(3) li, 
+ul:nth-of-type(4) li, 
+ul:nth-of-type(5) li, 
+ul:nth-of-type(6) li{
   display: inline-block;
   font-family: var(--fontTitel);
   font-size: 0.8em;
   list-style-type: none;
   display:flex;
+  /* margin:0 2em 0 2em; */
 }
 
-
-ul:nth-of-type(2) li:nth-of-type(1){
+/* Bellen - titel */
+ul:nth-of-type(2) li:nth-of-type(1), 
+ul:nth-of-type(3) li:nth-of-type(1),
+ul:nth-of-type(4) li:nth-of-type(1), 
+ul:nth-of-type(5) li:nth-of-type(1), 
+ul:nth-of-type(5) li:nth-of-type(1){
   font-size: 2em;
   color:#f0e33f;
   text-shadow: 3px 3px #000000;
 }
 
-ul:nth-of-type(2) li:nth-of-type(6), ul:nth-of-type(2) li:nth-of-type(7){
+/* Bellen - laatste paar regels in een ander lettertype */
+ul:nth-of-type(2) li:nth-of-type(7), ul:nth-of-type(2) li:nth-of-type(8), ul:nth-of-type(2) li:nth-of-type(9),
+ul:nth-of-type(3) li:nth-of-type(7), ul:nth-of-type(3) li:nth-of-type(8), ul:nth-of-type(3) li:nth-of-type(9),
+ul:nth-of-type(4) li:nth-of-type(7), ul:nth-of-type(5) li:nth-of-type(8), ul:nth-of-type(4) li:nth-of-type(9),
+ul:nth-of-type(5) li:nth-of-type(7), ul:nth-of-type(6) li:nth-of-type(8), ul:nth-of-type(5) li:nth-of-type(9),
+ul:nth-of-type(6) li:nth-of-type(7), ul:nth-of-type(7) li:nth-of-type(8), ul:nth-of-type(6) li:nth-of-type(9){
   margin-top: 0.75em;
   font-family: var(--fontPlatteTekst);
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
+/* bel */
 .belZichtbaar{
   display: flex;
   justify-content: center;
-
+  margin: 0;
+  padding:0;
 	position: absolute;
-	border-radius: 25%;
+	border-radius: 40%;
 	background-color: white;
 	background: linear-gradient(to left, #7e94bf, #88bfb0);
 	box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
@@ -106,19 +111,21 @@ ul:nth-of-type(2) li:nth-of-type(6), ul:nth-of-type(2) li:nth-of-type(7){
   align-items: center;
 }
 
+/* rand om de bubbel */
 .belZichtbaar:before {
 	content: "";
 	position: absolute;
 	display: block;
-	height: 40em;
-	width: 40em;
-	border-radius: 25%;
+	height: 42em;
+	width: 42em;
+	border-radius: 40%;
 	background: #84b9bf;
 	opacity: 0.8;
 	overflow: hidden;
   z-index: -1;
 }
 
+/* witte vlek op de bubbel */
 .belZichtbaar:after {
 	content: "";
 	position: absolute;
@@ -133,6 +140,15 @@ ul:nth-of-type(2) li:nth-of-type(6), ul:nth-of-type(2) li:nth-of-type(7){
   opacity: 0.2;
 }
 
+
+/* cursor veranderen */
+#bel1:hover, 
+#bel2:hover,
+#bel3:hover,
+#bel4:hover,
+#bel5:hover{
+  cursor: url('../images/naald.png') auto;
+}
 
 
 /* kwallen */
