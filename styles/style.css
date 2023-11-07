@@ -1,6 +1,7 @@
 /**************/
 /* CSS REMEDY */
 /**************/
+
 /* fonts */
 @font-face {
   font-family: "spongebobLettertype";
@@ -11,7 +12,6 @@
   font-family: "LondrinaSolid-Thin";
   src: url(../fonts/LondrinaSolid-Light.woff2) format("woff2");
 }
-
 
 /* naar een idee van Jen Simmons */
 *, *::after, *::before {

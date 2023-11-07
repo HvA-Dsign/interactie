@@ -1,4 +1,3 @@
-// JavaScript Document
 console.log("Spongebob!");
 
 // bel 1 
