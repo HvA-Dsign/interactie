@@ -1,5 +1,5 @@
 // JavaScript Document
-console.log("Howdy!");
+console.log("Spongebob!");
 
 // bel 1 
 var kwal1 = document.querySelector ("li:nth-of-type(1) img");
@@ -57,3 +57,42 @@ function sluitBel3() {
 
 kwal3.onclick = toggleBel3;
 bel3.onclick = sluitBel3;
+
+//  bel 4
+var kwal4 = document.querySelector ("li:nth-of-type(4) img");
+var tekstBel4 = document.getElementById("bel4");
+var bel4 = document.querySelector ("#bel4");
+
+function toggleBel4(){
+    tekstBel4.classList.toggle("belZichtbaar");
+    console.log("bel 4 zichtbaar");
+}
+
+function sluitBel4() {
+    if (tekstBel4.classList.contains("belZichtbaar")) {
+        tekstBel4.classList.remove("belZichtbaar");
+    }
+}
+
+kwal4.onclick = toggleBel4;
+bel4.onclick = sluitBel4;
+
+
+// bel 5 
+var kwal5 = document.querySelector ("li:nth-of-type(5) img");
+var tekstBel5 = document.getElementById("bel5");
+var bel5 = document.querySelector ("#bel5");
+
+function toggleBel5(){
+    tekstBel5.classList.toggle("belZichtbaar");
+    console.log("bel 5 zichtbaar");
+}
+
+function sluitBel5() {
+    if (tekstBel5.classList.contains("belZichtbaar")) {
+        tekstBel5.classList.remove("belZichtbaar");
+    }
+}
+
+kwal5.onclick = toggleBel5;
+bel5.onclick = sluitBel5;
