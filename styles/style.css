@@ -97,6 +97,8 @@ ul:nth-of-type(6) li:nth-of-type(7), ul:nth-of-type(6) li:nth-of-type(8), ul:nth
 }
 
 /* bel */
+/* Bron voor de code: https://codepen.io/theunnamedrd/pen/dyRqqej 
+  Ik heb de code eigen gemaakt.  */
 .belZichtbaar{
   display: flex;
   justify-content: center;
