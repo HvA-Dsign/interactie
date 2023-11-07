@@ -23,18 +23,22 @@ html {
   cursor: url('../images/muis.png') 32 23, auto;
 }
 
-body {
+main {
   position: relative;
   margin:0;
-  background-image: url("../images/achtergrond.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   min-height:100dvh;
   display:grid;
   place-items:center;
+  /* grid-template-rows: 1fr 2fr; */
   grid-template-rows: repeat(2, 1fr);
 }
 
+body {
+  background-image: url("../images/achtergrond.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
 
 /*********************/
 /* CUSTOM PROPERTIES */
@@ -52,6 +56,14 @@ body {
 /********************/
 /* ALGEMENE STYLING */
 /********************/
+
+/* tekst */
+h1{
+  margin:0;
+  font-size: 1.7em;
+  text-align: center;
+  font-family: var(--fontTitel);
+}
 
 
 /* Bellen */
@@ -185,9 +197,12 @@ ol li button {
   background-color: transparent;
 }
 
+ol li button:hover {
+  cursor: url('../images/muis.png') 32 23, auto;
+}
 
 /* spongebob GIF */
-body>img:first-of-type{
+main>img:first-of-type{
   position: absolute;
   right: -30em;
   bottom: 0;
@@ -214,7 +229,6 @@ body>img:first-of-type{
     transform: scaleX(-1);
   }
 }
-
 
 /********************/
 /* ANIMATIE */
@@ -293,4 +307,29 @@ ol li {
   animation-name: kwallen; 
   animation-duration: 10s; 
   animation-iteration-count: infinite; 
+}
+
+
+
+/* ZERO STATE - animatie h1 */
+@keyframes zeroState{
+  0%{
+  opacity: 1;
+  }
+
+  90%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+h1{
+  animation-name: zeroState; 
+  animation-duration: 10s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
 }
