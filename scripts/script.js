@@ -1,7 +1,7 @@
 console.log("Spongebob!");
 
 // bel 1 
-var kwal1 = document.querySelector ("li:nth-of-type(1) img");
+var kwal1 = document.querySelector ("li:nth-of-type(1) button");
 var tekstBel1 = document.getElementById("bel1");
 var bel1 = document.querySelector ("#bel1");
 
@@ -20,7 +20,7 @@ kwal1.onclick = toggleBel1;
 bel1.onclick = sluitBel1;
 
 // bel 2
-var kwal2 = document.querySelector ("li:nth-of-type(2) img");
+var kwal2 = document.querySelector ("li:nth-of-type(2) button");
 var tekstBel2 = document.getElementById("bel2");
 var bel2 = document.querySelector ("#bel2");
 
@@ -39,7 +39,7 @@ kwal2.onclick = toggleBel2;
 bel2.onclick = sluitBel2;
 
 // bel 3
-var kwal3 = document.querySelector ("li:nth-of-type(3) img");
+var kwal3 = document.querySelector ("li:nth-of-type(3) button");
 var tekstBel3 = document.getElementById("bel3");
 var bel3 = document.querySelector ("#bel3");
 
@@ -58,7 +58,7 @@ kwal3.onclick = toggleBel3;
 bel3.onclick = sluitBel3;
 
 //  bel 4
-var kwal4 = document.querySelector ("li:nth-of-type(4) img");
+var kwal4 = document.querySelector ("li:nth-of-type(4) button");
 var tekstBel4 = document.getElementById("bel4");
 var bel4 = document.querySelector ("#bel4");
 
@@ -78,7 +78,7 @@ bel4.onclick = sluitBel4;
 
 
 // bel 5 
-var kwal5 = document.querySelector ("li:nth-of-type(5) img");
+var kwal5 = document.querySelector ("li:nth-of-type(5) button");
 var tekstBel5 = document.getElementById("bel5");
 var bel5 = document.querySelector ("#bel5");
 
