@@ -95,3 +95,22 @@ function sluitBel5() {
 
 kwal5.onclick = toggleBel5;
 bel5.onclick = sluitBel5;
+
+
+//  code van de JS oefening van Sanne
+//  audio
+var geluid = document.querySelector("audio");
+var spongeBob = document.querySelector("main > img:first-of-type");
+
+spongeBob.onclick = audioSpongebob; 
+
+
+function audioSpongebob() {
+  if (geluid.paused) {
+    geluid.play();
+  }
+}
+
+
+
+//  Bronnen van content staan op miro

@@ -47,6 +47,8 @@ body {
 :root {
   --fontTitel:"spongebobLettertype", arial, helvetica, sans-serif;
   --fontPlatteTekst: "LondrinaSolid-Thin", helvetica, sans-serif;
+
+  --spongebobGeel: #f0e33f;
 }
 
 
@@ -58,11 +60,18 @@ body {
 /********************/
 
 /* tekst */
-h1{
-  margin:0;
-  font-size: 1.7em;
-  text-align: center;
+h1 {
+  font-size: 2em;
   font-family: var(--fontTitel);
+  color:var(  --spongebobGeel);
+  text-shadow: 0.1em 0.1em #000000;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1em;
+  /* transform: translateY(-50%); */
+  text-align: center; 
 }
 
 
@@ -83,7 +92,7 @@ dialog form{
 /* Bellen - titel */
 dialog form h2{
   font-size: 2.5em;
-  color:#f0e33f;
+  color: var(  --spongebobGeel);
   text-shadow: 0.1em 0.1em #000000;
   text-align: center;
   margin-top: -2em;
@@ -199,6 +208,12 @@ ol li button {
 
 ol li button:hover {
   cursor: url('../images/muis.png') 32 23, auto;
+}
+
+ol li button:focus{
+  outline: none;
+  filter: drop-shadow(0 0 0.75rem crimson);
+  border-radius: 10%;
 }
 
 /* spongebob GIF */
@@ -333,3 +348,5 @@ h1{
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
 }
+
+/* bronnen van content staat op miro */
