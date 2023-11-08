@@ -37,7 +37,7 @@ body {
   background-image: url("../images/achtergrond.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  
+  overflow: hidden;
 }
 
 /*********************/
@@ -51,7 +51,8 @@ body {
   --spongebobGeel: #f0e33f;
 }
 
-
+/* kleur paars
+rgb( 170, 158, 197) */
 
 
 
@@ -70,7 +71,6 @@ h1 {
   left: 0;
   right: 0;
   top: 1em;
-  /* transform: translateY(-50%); */
   text-align: center; 
 }
 
@@ -103,8 +103,7 @@ dialog form h2{
 dialog form p:nth-of-type(1),
 dialog form p:nth-of-type(2),
 dialog form p:nth-of-type(3),
-dialog form p:nth-of-type(4),
-dialog form p:nth-of-type(5){
+dialog form p:nth-of-type(4){
     font-size: 1em;
     text-align: center;
     font-family: var(--fontTitel);
@@ -137,31 +136,38 @@ dialog form p{
   right:auto;
 	position: absolute;
 	border-radius: 40%;
-	background-color: white;
 	background: linear-gradient(to left, #7e94bf, #88bfb0);
 	box-shadow: 0.125em 0.3125em 0.3125em rgba(0, 0, 0, 0.2);
   width: 40em;
   height: 40em;
   align-items: center;
   z-index: 2;
-  border: none;
+  border: 20px solid #84b9bf;
 }
 
-/* rand om de bubbel */
-.belZichtbaar:before {
-	content: "";
-	position: absolute;
-	display: block;
-	height: 42em;
-	width: 42em;
-	border-radius: 40%;
+/* overlay */
+.overlay{
+  position: absolute;
+	display: none;
+	height: 100vh;
+	width: 100vw;
 	background: #84b9bf;
-	opacity: 0.8;
-	overflow: hidden;
-  z-index: 1;
+  z-index: 2;
+  opacity: 0.5;
 }
+
+.show-overlay{
+  display: block;
+}
+/* rand om de bubbel */
+/* .belZichtbaar:before {
+	content: "";
+} */
 
 /* witte vlek op de bubbel */
+.belZichtbaar{
+  z-index: 3;
+}
 .belZichtbaar:after {
 	content: "";
 	position: absolute;
@@ -176,7 +182,6 @@ dialog form p{
   opacity: 0.2;
   z-index: 3;
 }
-
 
 /* cursor veranderen */
 #bel1:hover, 
@@ -208,27 +213,35 @@ ol li button {
 
 ol li button:hover {
   cursor: url('../images/muis.png') 32 23, auto;
+  filter: drop-shadow(0 0 0.75rem rgb(130, 121, 152));
+
 }
 
 ol li button:focus{
   outline: none;
   filter: drop-shadow(0 0 0.75rem crimson);
-  border-radius: 10%;
+}
+ol li button:active{
+  outline: none;
+  filter: drop-shadow(0 0 0.75rem blue);
 }
 
 /* spongebob GIF */
-main>img:first-of-type{
+main>button:first-of-type {
   position: absolute;
-  right: -30em;
+  right: -40em;
   bottom: 0;
   animation-name: spongebobRennen; 
-  animation-duration: 17s; 
+  animation-duration: 19s; 
   animation-iteration-count: 3; 
+  border: none;
+  background-color: transparent;
 }
+
 
 @keyframes spongebobRennen{
   0% {
-    right: -30em;
+    right: -40em;
     transform: scaleX(1);
   }
   50% {
@@ -240,10 +253,38 @@ main>img:first-of-type{
     transform: scaleX(-1);
   }
   100% {
-    right: -30em;
+    right: -40em;
     transform: scaleX(-1);
   }
 }
+
+main>button:first-of-type:focus{
+  outline: none;
+  filter: drop-shadow(0 0 0.75rem crimson);
+}
+main>button:first-of-type:active{
+  outline: none;
+  filter: drop-shadow(0 0 0.75rem blue);
+}
+
+/* jellyfish field bord */
+main>img:last-of-type{
+  position: absolute;
+  z-index: -2;
+  left:0;
+  bottom:35%;
+}
+
+/* spongebob met potlood  */
+main>img:nth-of-type(1){
+  position: absolute;
+  z-index: -2;
+  max-width: 7%;
+  right:1%;
+  top:38%;
+}
+
+
 
 /********************/
 /* ANIMATIE */
@@ -348,5 +389,29 @@ h1{
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
 }
+
+@keyframes potloodSpongebob{
+  0%{
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+    99%{
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    100%{
+      opacity: 1;
+    }
+}
+
+main>img:nth-of-type(1){
+  animation-name: potloodSpongebob; 
+  animation-duration: 30s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
+
 
 /* bronnen van content staat op miro */
