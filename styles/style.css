@@ -84,8 +84,13 @@ dialog form{
   display: inline-block;
   font-size: 0.8em;
   list-style-type: none;
-  margin:0 3em 0 3em;
+  margin: 0 3em 0 3.3em;
   z-index: 4;
+}
+
+dialog form p:last-of-type,
+dialog form h3:last-of-type {
+  margin: 1em 5em -1em 5em;
 }
 
 /* Bellen tekst */
@@ -97,6 +102,7 @@ dialog form h2{
   text-align: center;
   margin-top: -2em;
   font-family: var(--fontTitel);
+  margin-bottom: 0.1em;
 }
 
 /* Bellen - intro tekst */
@@ -104,7 +110,7 @@ dialog form p:nth-of-type(1),
 dialog form p:nth-of-type(2),
 dialog form p:nth-of-type(3),
 dialog form p:nth-of-type(4){
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: center;
     font-family: var(--fontTitel);
     margin:0;
@@ -135,11 +141,11 @@ dialog form p{
   left:auto;
   right:auto;
 	position: absolute;
-	border-radius: 40%;
+	border-radius: 50%;
 	background: linear-gradient(to left, #7e94bf, #88bfb0);
 	box-shadow: 0.125em 0.3125em 0.3125em rgba(0, 0, 0, 0.2);
-  width: 40em;
-  height: 40em;
+  width: 42em;
+  height: 42em;
   align-items: center;
   z-index: 2;
   border: 20px solid #84b9bf;
