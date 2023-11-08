@@ -3,6 +3,8 @@ console.log("Spongebob!");
 // overlay
 var overlay = document.querySelector(".overlay")
 
+
+
 // bel 1 
 var kwal1 = document.querySelector ("li:nth-of-type(1) button");
 var tekstBel1 = document.getElementById("bel1");
@@ -38,7 +40,7 @@ function toggleBel2(){
 function sluitBel2() {
     if (tekstBel2.classList.contains("belZichtbaar")) {
         tekstBel2.classList.remove("belZichtbaar");
-        overlay.classList.remove("show-overlay")
+        overlay.classList.remove("show-overlay");
     }
 }
 

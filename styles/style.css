@@ -392,6 +392,8 @@ h1{
   animation-fill-mode: forwards;
 }
 
+
+/* doodlebob*/
 @keyframes potloodSpongebob{
   0%{
     opacity: 0;
@@ -410,7 +412,7 @@ h1{
 
 main>img:nth-of-type(1){
   animation-name: potloodSpongebob; 
-  animation-duration: 30s; 
+  animation-duration: 50s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
 }
