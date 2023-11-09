@@ -51,10 +51,6 @@ body {
   --spongebobGeel: #f0e33f;
 }
 
-/* kleur paars
-rgb( 170, 158, 197) */
-
-
 
 /********************/
 /* ALGEMENE STYLING */
@@ -243,7 +239,6 @@ main>button:first-of-type {
   border: none;
   background-color: transparent;
 }
-
 
 @keyframes spongebobRennen{
   0% {
