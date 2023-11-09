@@ -124,6 +124,10 @@ h3{
   margin-top: 1.5em;
 }
 
+#bel5 h3:first-of-type{
+  margin-top: 0.2em;
+}
+
 /* Bellen - platte tekst */
 dialog form p{
   font-family: var(--fontPlatteTekst);
@@ -522,10 +526,159 @@ ol li:nth-of-type(3) {
   animation-name: kwal3; 
   animation-duration: 10s; 
   animation-iteration-count: infinite; 
-  /* animation-direction: reverse; */
 }
 
+/* ********** */
+/* kwal 4 */
+@keyframes kwal4 {
+  0%{
+    transform: translateY(8em); 
+    animation-timing-function: ease-in-out;
+  }
 
+  15%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  20%{
+    transform: translateY(5em); 
+    animation-timing-function: ease-in-out;
+
+  }
+
+ 25%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+
+
+  40%{
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  45%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+  50%{
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  55%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  
+
+  75%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  80%{
+    transform: translateY(5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  85%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+
+ 
+  100% {
+    transform: translateY(8em); 
+    animation-timing-function: ease-in-out;
+  }
+}
+
+ol li:nth-of-type(4) {
+  animation-name: kwal4; 
+  animation-duration: 15s; 
+  animation-iteration-count: infinite; 
+}
+
+/* ************ */
+/* kwal 5 */
+@keyframes kwal5 {
+  0%{
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  15%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  20%{
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+
+  }
+
+ 25%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+
+
+
+  40%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  45%{
+    transform: translateY(5em); 
+    animation-timing-function: ease-in-out;
+  }
+  50%{
+    transform: translateY(4.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  55%{
+    transform: translateY(5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  
+
+  75%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  80%{
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+  }
+
+  85%{
+    transform: translateY(1em); 
+    animation-timing-function: ease-in-out;
+  }
+
+
+ 
+  100% {
+    transform: translateY(0.5em); 
+    animation-timing-function: ease-in-out;
+  }
+}
+
+ol li:nth-of-type(5) {
+  animation-name: kwal5; 
+  animation-duration: 20s; 
+  animation-iteration-count: infinite; 
+}
 
 /* ZERO STATE - animatie h1 */
 @keyframes zeroState{
@@ -545,7 +698,7 @@ ol li:nth-of-type(3) {
 
 h1{
   animation-name: zeroState; 
-  animation-duration: 10s; 
+  animation-duration: 20s; 
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
 }
