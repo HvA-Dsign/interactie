@@ -29,7 +29,6 @@ main {
   min-height:100dvh;
   display:grid;
   place-items:center;
-  /* grid-template-rows: 1fr 2fr; */
   grid-template-rows: repeat(2, 1fr);
 }
 
@@ -151,7 +150,7 @@ dialog form p{
   border: 20px solid #84b9bf;
 }
 
-/* overlay */
+/* overlay als je op een bel klikt */
 .overlay{
   position: absolute;
 	display: none;
@@ -216,13 +215,13 @@ ol li button {
 ol li button:hover {
   cursor: url('../images/muis.png') 32 23, auto;
   filter: drop-shadow(0 0 0.75rem rgb(130, 121, 152));
-
 }
 
 ol li button:focus{
   outline: none;
   filter: drop-shadow(0 0 0.75rem crimson);
 }
+
 ol li button:active{
   outline: none;
   filter: drop-shadow(0 0 0.75rem blue);
@@ -291,7 +290,9 @@ main>img:nth-of-type(1){
 /* ANIMATIE */
 /********************/
 
+/* ************ */
 /* kwallen animatie  */
+/* Animatie - kwal 1 */
 @keyframes kwallen {
   0%{
     transform: translateY(8em); 
@@ -367,7 +368,7 @@ ol li {
 }
 
 /* ************ */
-/* kwal 2 */
+/* Animatie - kwal 2 */
 @keyframes kwal2 {
   0%{
     transform: translateY(8em); 
@@ -444,11 +445,8 @@ ol li:nth-of-type(2) {
 
 
 
-
-
-
 /* ************ */
-/* kwal 3 */
+/* Animatie - kwal 3 */
 @keyframes kwal3 {
   0%{
     transform: translateY(0.5em); 
@@ -523,8 +521,9 @@ ol li:nth-of-type(3) {
   animation-iteration-count: infinite; 
 }
 
+
 /* ********** */
-/* kwal 4 */
+/* Animatie - kwal 4 */
 @keyframes kwal4 {
   0%{
     transform: translateY(8em); 
@@ -599,8 +598,9 @@ ol li:nth-of-type(4) {
   animation-iteration-count: infinite; 
 }
 
+
 /* ************ */
-/* kwal 5 */
+/* Animatie - kwal 5 */
 @keyframes kwal5 {
   0%{
     transform: translateY(0.5em); 
@@ -675,7 +675,8 @@ ol li:nth-of-type(5) {
   animation-iteration-count: infinite; 
 }
 
-/* ZERO STATE - animatie h1 */
+/* *************************** */
+/* Animatie - ZERO STATE - animatie h1 */
 @keyframes zeroState{
   0%{
   opacity: 1;
@@ -699,7 +700,8 @@ h1{
 }
 
 
-/* doodlebob*/
+/* ************ */
+/* Animatie - doodlebob */
 @keyframes potloodSpongebob{
   0%{
     opacity: 0;
